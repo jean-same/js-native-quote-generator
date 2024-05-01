@@ -17,50 +17,25 @@ html {
 }
 
 .quote-container {
-  width: auto;
   max-width: 900px;
-  background-color: #f5f5f5;
-  border: 2px solid #ccc;
-  border-radius: 28px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(37, 22, 22, 0.1);
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
 }
 
-.category-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 0 10px;
+#no-quote-container {
+  font-size: 1.8em;
 }
 
-.category-label {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.category-select {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.5;
-  appearance: none;
-  background-color: inherit;
-  border: #cccccc5f 2px solid;
+#no-quote-container,
+.quote-container {
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.category-badge {
-  padding: 0.5em;
-  font-size: 1.2rem;
+.tag-badge {
+  padding: 0.2em 0.3em;
+  margin: 0 0.1em;
+  font-size: 1rem;
   font-weight: 400;
   background-color: #333;
   color: #fff;
@@ -102,7 +77,7 @@ html {
 .button-container {
   margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .button-container button {
@@ -137,7 +112,6 @@ html {
 
 /* Loader */
 .loader {
-  display: none;
   border: 16px solid #f3f3f3;
   border-top: 16px solid #333;
   border-radius: 50%;
@@ -159,6 +133,7 @@ html {
 @media screen and (max-width: 1000px) {
   .quote-container {
     margin: auto 10px;
+    width: 80%;
   }
 
   .quote-text {
