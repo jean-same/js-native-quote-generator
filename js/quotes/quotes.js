@@ -46,6 +46,11 @@ const quotes = {
           const tagBadge = document.createElement("span");
           tagBadge.classList.add("tag-badge");
           tagBadge.textContent = tag;
+          const backgroundColor = colorUtils.random();
+          const textColor = colorUtils.text(backgroundColor);
+
+          tagBadge.style.backgroundColor = backgroundColor;
+          tagBadge.style.color = textColor;
           tagsContainer.appendChild(tagBadge);
         });
       }
@@ -58,6 +63,9 @@ const quotes = {
       // Show quote container
       displayUtils.showQuoteContainer();
     }
+
+    // random background color
+    document.body.style.backgroundColor = colorUtils.random();
 
     // Hide loader
     displayUtils.hideLoader();
