@@ -17,6 +17,10 @@ const app = {
     document
       .querySelector("#tags")
       .addEventListener("click", app.handleTagClick);
+
+    document
+      .querySelector("#x-twitter")
+      .addEventListener("click", app.handleTweetClick);
   },
 
   /**
@@ -32,6 +36,17 @@ const app = {
       // Get a new quote based on the clicked tag.
       quotes.new(clickedTag);
     }
+  },
+  /**
+   * Handles tweet click to tweet the quote.
+   */
+  handleTweetClick: function () {
+    // Get the quote and author text elements
+    const quoteText = document.querySelector("#quote");
+    const authorText = document.querySelector("#author");
+
+    // Post the quote to Twitter
+    tweet.post(quoteText, authorText);
   },
 };
 

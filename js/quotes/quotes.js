@@ -1,4 +1,4 @@
-// Module for handling quotes, including fetching from an external API and local storage.
+// Module for handling quotes, including fetching from an external API and local quotes.
 const quotes = {
   /**
    * Retrieves a new quote, either from the API or local storage, and updates the UI accordingly.
